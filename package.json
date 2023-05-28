@@ -1,0 +1,31 @@
+{
+  "name": "full-stack-mongodb",
+  "version": "1.0.0",
+  "description": "Xpresser Basic Full Stack App with MongoDb",
+  "main": "main.ts",
+  "repository": "https://github.com/xpresserjs/full-stack-mongodb.git",
+  "author": "xpresserjs",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "npm run build && node build/main.js",
+    "build": "npx xjs @stack tsc",
+    "ts-watch": "npx tsc --watch",
+    "ts-dev": "npx ts-node-dev --respawn main.ts",
+    "js-dev": "npx nodemon build/main.js"
+  },
+  "dependencies": {
+    "@xpresser/env": "^2.1.1",
+    "@xpresser/xpress-mongo": "^1.1.8",
+    "xpress-mongo": "^2.8.0",
+    "xpresser": "^0.31.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.6.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.4",
+    "xjs-cli": "^1.0.2"
+  }
+}
