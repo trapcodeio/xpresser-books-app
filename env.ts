@@ -6,7 +6,7 @@ const env = Env(
     {
         NODE_ENV: Env.is.enum(["development", "production"] as const, "development"),
 
-        APP_NAME: Env.is.string("My Xpresser App"),
+        APP_NAME: Env.is.string("Books App"),
         APP_PORT: Env.is.number(9000),
         APP_HOST: Env.optional.string("Localhost"),
 
