@@ -28,7 +28,7 @@ repl.beforeStart(($) => {
  * Function will run after repl server starts.
  * @param $ - Current Xpresser Instance
  */
-repl.start(($) => {
+repl.start((_$) => {
     // repl.server is now defined.
     // Any Customization to the repl server `repl.server` directly can be done here.
 }).catch(console.error);

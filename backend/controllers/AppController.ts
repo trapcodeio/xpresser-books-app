@@ -1,4 +1,4 @@
-import { Controller, Http } from "xpresser/types/http";
+import { Controller } from "xpresser/types/http";
 
 const AppController = <Controller.Object>{
     /**
