@@ -2,33 +2,47 @@
 
 ![Alt text](https://cdn.jsdelivr.net/npm/xpresser/xpresser-logo-black.png "Xpresser Logo")
 
-Full Stack App. Includes a few features that is used in most of the apps.
+A simple Books App API using **Xpresser** and **MongoDB**.
 
-- Env using [@xpresser/env](https://npmjs.com/package/@xpresser/env)
-- MongoDB ready using [xpress-mongo](https://npmjs.com/package/xpress-mongo)
-- use.json
-- Custom Request Engine.
-- Repl Ready (linked to db)
-- Prettier (Development)
+# Stack
 
-### Use
+## Backend
+- [Node.js](https://nodejs.org/en/)
+- [Xpresser](https://xpresserjs.com)
+- [MongoDB](https://www.mongodb.com/)
 
-1. Clone Or Download
-2. copy `env.example` to `.env`
-3. Run `yarn` or `npm` install.
-4. Run `npm run ts-dev` or `yarn run ts-dev`
-5. check config in [config.ts](./config.ts)
-6. Read [Xpresser Documentation](https://xpresserjs.com/typescript)
+## Frontend
+- [vue-books-app](https://github.com/trapcodeio/vue-books-app)
 
-### Package Commands
 
-- **start**: Builds file and runs built file.
-- **build**: Build Typescript files
-- **ts-watch**: Compile typescript in realtime while watching or changes.
-- **ts-dev**: Start app in typescript mode.
-- **js-dev**: Uses `nodemon` to run the built file. This is useful when using tsc watch.
+# Setup
+By default, this should work without an `env` file. If you want to change the default values, create a `.env` file in the root of the project.
 
-#### What next?
+```bash
+# Create .env file
+cp .env.example .env
+```
 
-Please, Star Project :)
-Thank you so much.
+Then start the app.
+
+```bash
+# Development
+npm run ts-dev
+
+# Production
+npm run start
+```
+
+# Docker
+You can also run the app using Docker.
+The docker-compose file exists in `.docker` folder.
+
+```bash
+cd .docker
+
+# Build the app (only needed once)
+docker compose up --build -d
+
+# Run the app
+docker compose up -d
+```
