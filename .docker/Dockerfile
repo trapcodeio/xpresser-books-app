@@ -11,10 +11,6 @@ RUN yarn install
 
 COPY . .
 
-ARG BUILD_ENV
-
-RUN if [ "$BUILD_ENV" = "prod" ] ; then yarn build ; fi
-
 # Dev stage
 FROM base as dev
 
@@ -28,7 +24,7 @@ FROM base as build
 
 ENV APP_PORT=9000
 
-RUN yarn install --production
+RUN yarn install --production && yarn build
 
 EXPOSE $APP_PORT
 CMD [ "node", "build/main.js" ]
