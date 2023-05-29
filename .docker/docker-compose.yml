@@ -7,9 +7,11 @@ services:
       dockerfile: .docker/Dockerfile
       target: dev # use `build` for production
     environment:
-        - APP_PORT=9000
+        - NODE_ENV=development
+        - DB_SERVER=mongodb://mongo/books
+        - DB_NAME=books
     ports:
-      - "9091:9000"
+      - "9000:9000"
     volumes:
       - ./../:/app
     links:
