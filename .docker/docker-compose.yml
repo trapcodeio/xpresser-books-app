@@ -8,8 +8,7 @@ services:
       target: build # use `build` for production
     environment:
         - NODE_ENV=production
-        - DB_SERVER=mongodb://mongo/books
-        - DB_NAME=books
+        - MONGODB_SERVER=mongodb://mongo/books
     ports:
       - "9000:9000"
     volumes:
