@@ -24,7 +24,7 @@ FROM base as build
 
 ENV APP_PORT=9000
 
-RUN yarn install --production && yarn build
+RUN yarn build && yarn install --production
 
 EXPOSE $APP_PORT
 CMD [ "node", "build/main.js" ]
