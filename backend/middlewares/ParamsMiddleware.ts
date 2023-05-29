@@ -15,8 +15,12 @@ export = {
         }
 
         const id = http.params.id as string;
-        const book = await Book.findById(id);
 
+        if (!Book.isValidId(id)) {
+            return http.error(400, "Invalid Book Id!");
+        }
+
+        const book = await Book.findById(id);
         if (!book) {
             return http.error(404, "Book not found!");
         }

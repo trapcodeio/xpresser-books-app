@@ -19,8 +19,15 @@ export = <Controller.Object<{ book?: Book }>>{
     /**
      * Books - GET /books
      */
-    async index() {
-        const books = await Book.find<BookDataType>();
+    async index(http) {
+        const title = http.$query.get<string>("title");
+        const query: Record<string, any> = {};
+
+        if (title) {
+            query.title = { $regex: title, $options: "i" };
+        }
+
+        const books = await Book.find<BookDataType>(query);
         return books.map(Book.toResponse);
     },
 
