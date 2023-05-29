@@ -10,9 +10,9 @@ const env = Env(
         APP_PORT: Env.is.number(9000),
         APP_HOST: Env.optional.string("Localhost"),
 
-        DB_SERVER: Env.is.string("mongodb://127.0.0.1:27017"),
-        DB_NAME: Env.is.string("books"),
-        DB_PASSWORD: Env.optional.string()
+        MONGODB_SERVER: Env.is.string("mongodb://127.0.0.1:27017"),
+        MONGODB_DATABASE: Env.is.string("books"),
+        MONGODB_PASSWORD: Env.optional.string()
     },
     {
         expose: true,

@@ -8,9 +8,9 @@ import { parseServerUrl } from "xpress-mongo";
 /**
  * Parse MongoDB URL
  */
-const mongoUrl = parseServerUrl(env.DB_SERVER, {
-    dbname: env.DB_NAME,
-    password: env.DB_PASSWORD
+const mongoUrl = parseServerUrl(env.MONGODB_SERVER, {
+    dbname: env.MONGODB_DATABASE,
+    password: env.MONGODB_PASSWORD
 });
 
 export = {
@@ -60,6 +60,6 @@ export = {
     // Connection Config
     mongodb: {
         url: mongoUrl,
-        database: env.DB_NAME
+        database: env.MONGODB_DATABASE
     }
 };
