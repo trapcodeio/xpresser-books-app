@@ -20,7 +20,7 @@
   "stacks": {
     "tsc": [
       "rm -rf build",
-      "tsc -p tsconfig.json"
+      "npx tsc -p tsconfig.json"
     ]
   }
 }
