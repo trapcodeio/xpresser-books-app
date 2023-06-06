@@ -18,7 +18,8 @@ FROM base as dev
 RUN apk add musl libgcc libstdc++ git curl wget bash ca-certificates openssh-client
 
 ENV NODE_ENV=development
-ENV APP_PORT=9000
+ARG APP_PORT=9000
+ENV APP_PORT=$APP_PORT
 
 EXPOSE $APP_PORT
 CMD [ "yarn", "run", "ts-dev" ]
@@ -27,7 +28,8 @@ CMD [ "yarn", "run", "ts-dev" ]
 FROM base as prod
 
 ENV NODE_ENV=production
-ENV APP_PORT=9000
+ARG APP_PORT=9000
+ENV APP_PORT=$APP_PORT
 
 # build
 RUN yarn build
