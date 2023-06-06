@@ -7,7 +7,7 @@ services:
       dockerfile: .docker/Dockerfile
       target: dev # use `prod` for production
       args:
-        API_PORT: 9000
+        APP_PORT: 9000
     environment:
         - MONGODB_SERVER=mongodb://mongo/books
     ports:
