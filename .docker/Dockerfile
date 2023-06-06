@@ -18,22 +18,18 @@ FROM base as dev
 RUN apk add musl libgcc libstdc++ git curl wget bash ca-certificates openssh-client
 
 ENV NODE_ENV=development
-ARG APP_PORT=9000
-ENV APP_PORT=$APP_PORT
 
-EXPOSE $APP_PORT
+EXPOSE 9000
 CMD [ "yarn", "run", "ts-dev" ]
 
 # Prod stage
 FROM base as prod
 
 ENV NODE_ENV=production
-ARG APP_PORT=9000
-ENV APP_PORT=$APP_PORT
 
 # build
 RUN yarn build
 
 
-EXPOSE $APP_PORT
+EXPOSE 9000
 CMD [ "node", "build/main.js" ]
