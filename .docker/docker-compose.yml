@@ -5,14 +5,13 @@ services:
     build:
       context: ./../
       dockerfile: .docker/Dockerfile
-      target: build # use `build` for production
+      target: dev # use `prod` for production
     environment:
-        - NODE_ENV=production
         - MONGODB_SERVER=mongodb://mongo/books
     ports:
       - "9000:9000"
     volumes:
-      - ./../:/app
+      - ./../:/usr/src/app
     links:
       - mongo
   mongo:
