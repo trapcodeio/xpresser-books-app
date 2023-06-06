@@ -29,6 +29,9 @@ Then start the app.
 # Development
 npm run ts-dev
 
+# Debug
+npm run ts-dev-debug
+
 # Production
 npm run start
 ```
