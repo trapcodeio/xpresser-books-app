@@ -15,7 +15,7 @@ COPY . .
 FROM base as dev
 
 # Needed for VS Code Remote Development
-RUN apk add musl libgcc libstdc++ git curl wget bash ca-certificates openssh-client
+RUN apk add musl libgcc libstdc++ git curl wget bash ca-certificates gcompat openssh-client
 
 ENV NODE_ENV=development
 
