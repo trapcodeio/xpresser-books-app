@@ -10,8 +10,7 @@
   "scripts": {
     "start": "npm run build && node build/main.js",
     "build": "npx xjs @stack tsc",
-    "ts-dev": "npx ts-node main.ts",
-    "ts-dev-watch": "npx ts-node-dev --respawn main.ts",
+    "dev": "npx ts-node-dev --respawn --transpile-only main.ts",
     "ts-dev-debug": "npx ts-node-dev --inspect=9229 main.ts",
     "ts-watch": "npx tsc --watch",
     "js-dev": "npx nodemon build/main.js"
