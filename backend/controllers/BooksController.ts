@@ -5,7 +5,7 @@ import Book, { BookDataType, BookForm } from "../models/Book";
  * BooksController
  *
  * `book` is optional because it is not available in all methods.
- * only methods with `Params.bookId` middleware will have `book`.
+ * only methods with `Params.bookId` middleware will have `book`
  */
 export = <Controller.Object<{ book?: Book }>>{
     // Controller Name
