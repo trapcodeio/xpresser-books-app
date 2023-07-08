@@ -20,7 +20,7 @@ RUN apk add musl libgcc libstdc++ git curl wget bash ca-certificates gcompat ope
 ENV NODE_ENV=development
 
 EXPOSE 9000
-CMD [ "yarn", "run", "ts-dev" ]
+CMD [ "yarn", "run", "dev" ]
 
 # Prod stage
 FROM base as prod
