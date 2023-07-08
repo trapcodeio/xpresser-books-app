@@ -1,10 +1,10 @@
 {
-  "name": "full-stack-mongodb",
+  "name": "xpresser-books-app",
   "version": "1.0.0",
-  "description": "Xpresser Basic Full Stack App with MongoDb",
+  "description": "A simple books app built with xpresser and mongodb",
   "main": "main.ts",
-  "repository": "https://github.com/xpresserjs/full-stack-mongodb.git",
-  "author": "xpresserjs",
+  "repository": "https://github.com/trapcodeio/xpresser-books-app.git",
+  "author": "trapcodeio <helpdesk@trapcode.io>",
   "license": "MIT",
   "private": false,
   "scripts": {
